@@ -29,4 +29,7 @@ Rails.application.routes.draw do
   #keyword routes
   resources :keywords, only: [:show, :index, :create]
 
+  #notes routes
+  resources :notes, only: [:create, :edit, :update, :destroy]
+
 end

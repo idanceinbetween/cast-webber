@@ -1,6 +1,7 @@
 <section class="w-75 mx-auto">
-<div class="text-center display-4">Welcome back, <%= @user.username%>!
-</div>
+<div class="text-center display-4">Welcome back, <%= @user.username%>!</div>
+
+<p class="text-center"><%= flash[:notice] if flash[:notice]%></p>
 
 <p align="center"><a href="#account">Account Management</a> | <a href="#podcasts">Subscribed Podcasts</a> | <a href="#favourite_episodes">Favourite Episodes</a> | <a href="#annotations">Annotations</a></p>
 <p>&nbsp;</p>
@@ -62,20 +63,26 @@
 <p>&nbsp;</p>
 
 <a name="annotations"><h4>Annotations</h4></a>
-<%@notes.each_slice(3) do |group|%>
-<div class="row">
-  <% group.each do |n|%>
-  <div class="col-md-4">
-    <div class="card">
-      <div class="card-body">
-        <p class="card-text"><%= n.content%></p>
+<% if @notes.count == 0 %>
+  <p>You have not made any notes.</p>
+<% else %>
+  <%@notes.each_slice(3) do |group|%>
+  <div class="row">
+    <% group.each do |n|%>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <p class="card-text"><%= n.content%></p>
+          <p><small class="text-muted"><%= link_to "Edit this note", "/notes/#{n.id}/edit" %> |
+          <%= link_to "Delete this note", n, method: :delete, data: {confirm: 'Are you sure?'}%></small></p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">on: <%=link_to n.annotated_episode.title, n.annotated_episode%> from <%=link_to n.annotated_episode.podcast.name,n.annotated_episode.podcast%></small>
+        </div>
       </div>
-      <div class="card-footer">
-        <small class="text-muted">on: <%=link_to n.annotated_episode.title, n.annotated_episode%> from <%=link_to n.annotated_episode.podcast.name,n.annotated_episode.podcast%></small>
-      </div>
-    </div>
-   </div>
-   <% end %>
+     </div>
+     <% end %>
+<% end %>
 <p>&nbsp;</p>
 </div>
 <% end %>

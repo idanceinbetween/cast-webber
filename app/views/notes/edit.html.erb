@@ -1,0 +1,53 @@
+<header>
+  <h1 class="text-center display-4"><%= @episode.title%></h1>
+
+<p class="text-center">
+  An episode from: <%= link_to @podcast.name, @podcast%>
+</p>
+</header>
+
+<section class="w-75 mx-auto">
+<div class="text-center">
+<p><%=form_for @note do |f|%>
+  <%=f.text_area :content%><br>
+  <%=f.hidden_field :episode_id, value: "#{@episode.id}"%>
+  <%=f.hidden_field :user_id, value: "#{@user.id}"%>
+  <%=f.submit "Edit Note"%>
+<%end%></p>
+<p><%= link_to "Delete this note", @note, method: :delete, data: {confirm: 'Are you sure?'}%></p>
+</div>
+
+
+<a name="annotations"></a>
+<h4>Other Annotations:</h4>
+<% if @siblings%>
+  <% @siblings.each_slice(3) do |group| %>
+  <div class="row">
+    <% group.each do |n| %>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <p class="card-text"><%= n.content %></p>
+          <p><%if n.notator == @user%><small class="text-muted"><%= link_to "Edit this note", edit_note_path %></small><%end%></p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Notated by: <%= link_to n.notator.username, n.notator %></small><br>
+        </div>
+      </div>
+     </div>
+     <% end %>
+  <p>&nbsp;</p>
+  </div>
+  <% end %>
+<% end %>
+<p>&nbsp;</p>
+
+<p class="lead">
+  <b>Show Notes: </b><%= @episode.description %>
+</p>
+<p class="text-left">
+  Episode Keywords: <% @keywords.each do |k|%><%=link_to k.word, k %> | <% end %>
+</p>
+<p>&nbsp;</p>
+
+</section>

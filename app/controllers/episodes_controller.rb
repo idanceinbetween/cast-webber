@@ -27,6 +27,7 @@ class EpisodesController < ApplicationController
     @podcast = @episode.podcast
     @favouriters = @episode.favouriters
     @notes = @episode.notes
+    @note = Note.new
     @keywords = @episode.keywords
     @user = current_user
     if @podcast.episodes.size > 1

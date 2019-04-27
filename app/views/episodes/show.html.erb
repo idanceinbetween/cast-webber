@@ -1,6 +1,8 @@
 <header>
   <h1 class="text-center display-4"><%= @episode.title%></h1>
 
+<p class="text-center">  <%= flash[:notice] if flash[:notice]%></p>
+
 <p class="text-center">
   An episode from: <%= link_to @podcast.name, @podcast%>
 </p>
@@ -46,7 +48,7 @@
 <a name="annotations"></a>
 <h4>Annotations:</h4>
 <% if @notes.count == 0 %>
-  No notes available for this episode
+  <p>No notes available for this episode.</p>
 <% else %>
   <% @notes.each_slice(3) do |group| %>
   <div class="row">
@@ -55,9 +57,12 @@
       <div class="card">
         <div class="card-body">
           <p class="card-text"><%= n.content %></p>
+          <%if n.notator == @user%>
+            <p><small class="text-muted"><%= link_to "Edit this note", "/notes/#{n.id}/edit" %> |
+            <%= link_to "Delete this note", n, method: :delete, data: {confirm: 'Are you sure?'}%></small></p><%end%> 
         </div>
         <div class="card-footer">
-          <small class="text-muted">Notated by: <%= link_to n.notator.username, n.notator %></small>
+          <small class="text-muted">Notated by: <%= link_to n.notator.username, n.notator %></small><br>
         </div>
       </div>
      </div>
@@ -66,6 +71,15 @@
   </div>
   <% end %>
 <% end %>
+
+<%if session[:user_id]%>
+<p><%=form_for @note do |f|%>
+  <%=f.text_area :content%><br>
+  <%=f.hidden_field :episode_id, value: "#{@episode.id}"%>
+  <%=f.hidden_field :user_id, value: "#{@user.id}"%>
+  <%=f.submit "Add Notes"%>
+<%end%></p>
+<%end%>
 
 <p>&nbsp;</p>
 
