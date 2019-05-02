@@ -1,0 +1,71 @@
+const EPISODE = {
+    "pub_date_ms": 1544878800000,
+    "listennotes_edit_url": "https://www.listennotes.com/e/983e4833a14049f6bbc233197c32e1c3/#edit",
+    "description": "<p>Our co-host is comedian Christian Finnegan, and we learn: the difference between danger and fear; the role of clouds in climate change; and why (and when) politicians are bad at math. <em>Washington Post</em> columnist Alexandra Petri is our real-time fact-checker!</p>",
+    "audio": "https://www.listennotes.com/e/p/983e4833a14049f6bbc233197c32e1c3/",
+    "listennotes_url": "https://www.listennotes.com/e/983e4833a14049f6bbc233197c32e1c3/",
+    "maybe_audio_invalid": false,
+    "thumbnail": "https://d3sv2eduhewoas.cloudfront.net/channel/image/a66edc8b4e2341ec8fedf0716a78b640.jpg",
+    "podcast": {
+        "rss": "https://www.listennotes.com/c/r/61eb6cf4b84d493b8ad512e01f72e2ef",
+        "website": "http://freakonomics.com/?utm_source=listennotes.com&utm_campaign=Listen+Notes&utm_medium=website",
+        "country": "United States",
+        "listennotes_url": "https://www.listennotes.com/c/61eb6cf4b84d493b8ad512e01f72e2ef/",
+        "language": "English",
+        "thumbnail": "https://d3sv2eduhewoas.cloudfront.net/channel/image/a66edc8b4e2341ec8fedf0716a78b640.jpg",
+        "genres": [
+            "Personal Finance",
+            "Podcasts",
+            "Business",
+            "Management & Marketing",
+            "Investing",
+            "Education",
+            "Society & Culture"
+        ],
+        "id": "61eb6cf4b84d493b8ad512e01f72e2ef",
+        "description": "\n      <p>Discover the hidden side of everything with Stephen J. Dubner, co-author of the&nbsp;<em>Freakonomics</em>&nbsp;books. Each week,&nbsp;<em>Freakonomics Radio</em>&nbsp;tells you things you always thought you knew (but didn’t) and things you never thought you wanted to know (but do) —&nbsp;from the economics of sleep to how to become great at just about anything. Dubner speaks with Nobel laureates and provocateurs, intellectuals and entrepreneurs, and various other underachievers. Special features include series like “The Secret Life of a C.E.O.” as well as a live game show, “Tell Me Something I Don’t Know.”&nbsp;</p>\n    ",
+        "email": "originals@stitcher.com",
+        "total_episodes": 402,
+        "looking_for": {
+            "cohosts": false,
+            "cross_promotion": false,
+            "guests": false,
+            "sponsors": false
+        },
+        "extra": {
+            "youtube_url": "",
+            "url3": "",
+            "wechat_handle": "",
+            "google_url": "",
+            "url1": "",
+            "url2": "",
+            "instagram_handle": "",
+            "facebook_handle": "",
+            "spotify_url": "",
+            "twitter_handle": "",
+            "linkedin_url": ""
+        },
+        "itunes_id": 354668519,
+        "explicit_content": false,
+        "is_claimed": false,
+        "earliest_pub_date_ms": 1332450798000,
+        "lastest_pub_date_ms": 1556766000000,
+        "genre_ids": [
+            144,
+            67,
+            93,
+            97,
+            98,
+            111,
+            122
+        ],
+        "publisher": "​Dubner Productions and Stitcher",
+        "title": "Freakonomics Radio",
+        "image": "https://d3sv2eduhewoas.cloudfront.net/channel/image/a66edc8b4e2341ec8fedf0716a78b640.jpg"
+    },
+    "audio_length": 3320,
+    "id": "983e4833a14049f6bbc233197c32e1c3",
+    "title": "Freakonomics Radio Live: “Where Does Fear Live in the Brain?”",
+    "image": "https://d3sv2eduhewoas.cloudfront.net/channel/image/a66edc8b4e2341ec8fedf0716a78b640.jpg",
+    "explicit_content": false
+}

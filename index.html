@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Cast Webber</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js"></script>
+</head>
+
+<body>
+  <header class="uk-padding uk-padding-remove-bottom">
+    <h1>Cast Webber</h1>
+    <p class="uk-text-meta">Take notes for podcasts, audiobooks and beyond. </p>
+    <h2 id='episode-header'></h2>
+  </header>
+
+  <main class="uk-grid uk-padding">
+
+    <!-- The left DIV containing user's note-taking functions -->
+    <div id='left-container' class="uk-width-1-5 uk-card uk-card-default uk-margin-left">
+      <div id="click-for-new-form" class="uk-card-header uk-padding" uk-tooltip="Click here to add a new note">
+        + New Note
+      </div>
+    </div>
+
+    <!-- The center DIV containing notes forms and display -->
+    <div id='middle-container' class="uk-width-2-5 uk-card uk-card-default uk-padding uk-margin-left">
+    </div>
+
+    <!-- The right DIV containing features pertaining to episode meta data -->
+    <div class="uk-width-1-5 uk-card uk-card-default uk-padding uk-margin-left">
+
+      <div id="episode-info-container" class="uk-margin-small">
+        <h3>Episode Details</h3>
+      </div>
+      <hr>
+
+      <div id="podcast-info-container" class="uk-margin-small">
+        <h3>Podcast Details</h3>
+      </div>
+
+    <div name = "search-container" class="uk-margin-small">
+      <form id='search'>
+        <input type="text" id= "search" class="uk-input" placeholder="Search for...">
+        <button class="uk-button uk-button-default" type="submit">Search</button>
+      </form>
+    </div>
+
+</div>
+
+  </main>
+</body>
+<script src="episode-data.js"></script>
+<script src="notes-data.js"></script>
+<script src="index.js"></script>
+</html>
