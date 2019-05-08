@@ -1,5 +1,5 @@
 # Cast Away (Work in progress)
-A web app for podcast listeners to take notes and discover podcast episodes.
+An app to make notes whilst listening to podcasts, and discover new episodes.
 
 ## Description
 The idea of this app is based on a real life problem of mine which is not unlike other users (e.g. https://medium.com/@joshdance/how-to-take-notes-on-podcasts-d30e9233191). I just couldn't believe that there is no existing solution out there, and hope to find out why it is so. In an ideal world, this would be a mobile app, or available on some sort of wearables.
